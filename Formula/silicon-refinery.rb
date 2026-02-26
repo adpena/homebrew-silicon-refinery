@@ -10,12 +10,12 @@ class SiliconRefinery < Formula
 
   def install
     libexec.install Dir["*"]
-    # Homebrew treats README.md as a top-level metafile; keep a copy in libexec
-    # so uv/hatch editable installs can resolve [project.readme] at runtime.
-    libexec.install "README.md"
 
     (bin/"silicon-refinery").write <<~SH
       #!/bin/sh
+      if [ ! -f "#{libexec}/README.md" ] && [ -f "#{prefix}/README.md" ]; then
+        ln -sf "#{prefix}/README.md" "#{libexec}/README.md"
+      fi
       exec "#{Formula["uv"].opt_bin}/uv" run --project "#{libexec}" --directory "#{libexec}" silicon-refinery "$@"
     SH
   end
