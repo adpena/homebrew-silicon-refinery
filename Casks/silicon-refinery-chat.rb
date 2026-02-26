@@ -1,11 +1,13 @@
 cask "silicon-refinery-chat" do
-  version "0.0.209"
-  sha256 "ffd879f3841b3ba4d1a2def6536ba02206dc0113776436661cd2a8955665bd32"
+  version "0.0.210"
+  sha256 "c2824b6b09ff680d174115d4fb1fd478cf895565a31f9cc305721467899436f5"
 
   url "https://github.com/adpena/silicon-refinery-chat/releases/download/v#{version}/SiliconRefineryChat-#{version}.dmg"
   name "SiliconRefineryChat"
-  desc "Standalone macOS app for local Apple Foundation Models chat"
+  desc "Standalone app for local Apple Foundation Models chat"
   homepage "https://github.com/adpena/silicon-refinery-chat"
+
+  depends_on macos: ">= :big_sur"
 
   app "SiliconRefineryChat.app"
   binary "#{appdir}/SiliconRefineryChat.app/Contents/MacOS/SiliconRefineryChat",
