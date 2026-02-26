@@ -1,6 +1,6 @@
 cask "silicon-refinery-chat" do
   version "0.0.210"
-  sha256 "c2824b6b09ff680d174115d4fb1fd478cf895565a31f9cc305721467899436f5"
+  sha256 "586dce8a993dc1feba59cbae5ec4e2d2b129ca004b68c46a3b1d34fa7d5a83bb"
 
   url "https://github.com/adpena/silicon-refinery-chat/releases/download/v#{version}/SiliconRefineryChat-#{version}.dmg"
   name "SiliconRefineryChat"
@@ -10,7 +10,7 @@ cask "silicon-refinery-chat" do
   depends_on macos: ">= :big_sur"
 
   app "SiliconRefineryChat.app"
-  binary "#{appdir}/SiliconRefineryChat.app/Contents/MacOS/SiliconRefineryChat",
+  binary "#{appdir}/SiliconRefineryChat.app/Contents/Resources/silicon-refinery-chat",
          target: "silicon-refinery-chat"
 
   zap trash: [
