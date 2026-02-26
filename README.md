@@ -8,7 +8,7 @@ Homebrew tap for:
 
 ```bash
 brew tap adpena/silicon-refinery https://github.com/adpena/homebrew-silicon-refinery
-brew install --HEAD adpena/silicon-refinery/silicon-refinery
+brew install silicon-refinery
 brew install silicon-refinery-chat
 silicon-refinery-chat
 ```
