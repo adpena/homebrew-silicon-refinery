@@ -82,3 +82,7 @@ If you need to inspect the installed package metadata:
 brew info silicon-refinery
 brew info --cask silicon-refinery-chat
 ```
+
+## License
+
+Apache License 2.0. See [LICENSE](LICENSE).
